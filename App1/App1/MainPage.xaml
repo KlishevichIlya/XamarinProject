@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1;assembly=App1"
+             x:Class="App1.MainPage"
+             Title="MasterApp">
+ 
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master">
+            <ContentPage.Content>
+                <Grid>
+                    <Image Source="OD.jpg" Aspect="Fill" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                    <StackLayout Padding=" 5,30,5,5">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Image WidthRequest="65" HeightRequest="65" Aspect="AspectFit" Source="user.jpg" VerticalOptions="Center"></Image>
+                            <Label Text="User" VerticalOptions="Center"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit" Source="top.png" HorizontalOptions="Start" ></Image>
+                            <Button Text="{local:Translate Directors}" Clicked="Button1_Click" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit" Source="catalog.png" HorizontalOptions="Start" ></Image>
+                            <Button Text="{local:Translate Catalog}" Clicked="Button2_Click" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit" Source="earn2.png" HorizontalOptions="Start" ></Image>
+                            <Button Text="{local:Translate Geolocation}" Clicked="Button4_Click" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit" Source="chel.png" HorizontalOptions="Start" ></Image>
+                            <Button Text="{local:Translate Animation}" Clicked="Button5_Click" HorizontalOptions="FillAndExpand"></Button>
+                        </StackLayout>
+                       
+                    </StackLayout>
+                </Grid>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage >
+            <ContentPage.Content>
+                <Label Text="DetailPage" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </ContentPage.Content>
+
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
+

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1;assembly=App1"
+             x:Class="App1.Page4"
+             Title="{local:Translate Geoposition}"
+             >
+    <ContentPage.Content>
+    <StackLayout Orientation="Vertical">
+            <Button  Text="{local:Translate Your_coordinates}" Clicked="Button4_Clicked"/>
+            <Label Text="{local:Translate Longitude}" TextColor="Gray" FontSize="30"/>
+        <Label x:Name="LatitudeLabel" FontSize="20"/>
+        <Label Text="{local:Translate Latitude}" TextColor="Gray" FontSize="30"/>
+        <Label x:Name="LongitudeLabel" FontSize="20"/>
+            <Label Text="{local:Translate Nearest_cinema}" ></Label>
+            <Label x:Name="Cinema" />
+            
+            <Image x:Name="img" />
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

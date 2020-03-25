@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1;assembly=App1"
+             x:Class="App1.Page2"
+             Title="{local:Translate Directors}">
+
+    <ContentPage.Content>
+
+        <StackLayout>
+            <SearchBar Placeholder="{local:Translate Search }" TextChanged="SearchBar2_TextChanged"></SearchBar>
+            <ListView x:Name="listView2"
+                      IsGroupingEnabled="True"
+                      HasUnevenRows="False"
+                      RowHeight="100"
+                      GroupDisplayBinding="{Binding title}"
+                      ItemSelected="listView2_ItemSelected"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="listView2_Refreshing"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding imageURL}" WidthRequest="100" HeightRequest="100" HorizontalOptions="Start"></Image>
+                                <StackLayout>
+                                    <Label  FontSize="Micro" Text="{Binding name}"></Label>
+                                    <Label  FontSize="Micro" Text="{Binding films}"></Label>
+                                    <Label  FontSize="Micro" Text="{Binding age}"></Label>
+                                    <Label  FontSize="Micro" Text="{Binding medals}"></Label>
+                               </StackLayout>
+                            </StackLayout>
+                            <ViewCell.ContextActions>
+                                
+                                <MenuItem Text="{local:Translate Delete}" Clicked="Delete2_Clicked" IsDestructive="True" CommandParameter="{Binding . }"></MenuItem>
+                            </ViewCell.ContextActions>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
